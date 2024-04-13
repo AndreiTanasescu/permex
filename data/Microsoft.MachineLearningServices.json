@@ -1,0 +1,907 @@
+{
+    "value": [
+        {
+            "applicationId": "0736f41a-0425-4b46-bdb5-1563eff02385",
+            "roleDefinition": {
+                "idAsGuid": "376aa7d7-51a9-463d-bd4d-7e1691345612",
+                "id": "376aa7d751a9463dbd4d7e1691345612",
+                "name": "Microsoft Machine Learning Compute Service Role",
+                "isServiceRole": true,
+                "permissions": [
+                    {
+                        "actions": [
+                            "Microsoft.Authorization/roleAssignments/delete",
+                            "Microsoft.Authorization/roleAssignments/write",
+                            "Microsoft.Authorization/roleAssignments/read",
+                            "Microsoft.Authorization/denyAssignments/delete",
+                            "Microsoft.Authorization/denyAssignments/read",
+                            "Microsoft.Authorization/denyAssignments/write",
+                            "Microsoft.Authorization/checkAccess/action",
+                            "Microsoft.Authorization/checkAccess/read",
+                            "Microsoft.Authorization/policyAssignments/read",
+                            "Microsoft.Authorization/policyExemptions/read",
+                            "Microsoft.Authorization/classicAdministrators/read",
+                            "Microsoft.Batch/register/action",
+                            "Microsoft.BatchAI/clusters/read",
+                            "Microsoft.ContainerInstance/register/action",
+                            "Microsoft.ContainerRegistry/checknameavailability/read",
+                            "Microsoft.ContainerRegistry/registries/listCredentials/action",
+                            "Microsoft.ContainerRegistry/registries/read",
+                            "Microsoft.ContainerRegistry/registries/write",
+                            "Microsoft.ContainerService/containerServices/read",
+                            "Microsoft.ContainerService/managedClusters/accessProfiles/read",
+                            "Microsoft.ContainerService/managedClusters/read",
+                            "Microsoft.ContainerService/register/action",
+                            "Microsoft.Compute/virtualmachines/read",
+                            "Microsoft.Databricks/workspaces/read",
+                            "Microsoft.Databricks/workspaces/write",
+                            "Microsoft.DocumentDB/register/action",
+                            "Microsoft.EventHub/namespaces/eventhubs/authorizationRules/read",
+                            "Microsoft.EventHub/namespaces/eventhubs/read",
+                            "Microsoft.EventHub/namespaces/read",
+                            "Microsoft.Insights/components/CurrentBillingFeatures/read",
+                            "Microsoft.Insights/components/read",
+                            "Microsoft.MachineLearningServices/workspaces/read",
+                            "Microsoft.MachineLearningServices/workspaces/write",
+                            "Microsoft.Resources/deployments/operations/read",
+                            "Microsoft.Search/Register/action",
+                            "Microsoft.Storage/storageAccounts/listKeys/action",
+                            "Microsoft.Storage/storageAccounts/read",
+                            "Microsoft.Network/locations/operations/read",
+                            "Microsoft.Network/locations/operationResults/read",
+                            "Microsoft.ContainerRegistry/register/action",
+                            "Microsoft.Network/privateEndpoints/read",
+                            "Microsoft.Notebooks/register/action",
+                            "Microsoft.Notebooks/NotebookProxies/write",
+                            "Microsoft.Notebooks/NotebookProxies/read",
+                            "Microsoft.Notebooks/NotebookProxies/delete",
+                            "Microsoft.Notebooks/NotebookProxies/listCredentials/action",
+                            "Microsoft.Notebooks/NotebookProxies/privateEndpointConnectionProxies/action",
+                            "Microsoft.Notebooks/NotebookProxies/removePrivateEndpointConnectionProxies/action",
+                            "Microsoft.Network/privateEndpoints/privateLinkServiceProxies/read",
+                            "Microsoft.Network/privateEndpoints/privateLinkServiceProxies/write",
+                            "Microsoft.Network/privateEndpoints/privateDnsZoneGroups/read",
+                            "Microsoft.Network/privateDnsZones/read",
+                            "Microsoft.Network/privateDnsZones/virtualNetworkLinks/read",
+                            "Microsoft.Network/privateDnsZones/A/read",
+                            "Microsoft.Network/networkInterfaces/read",
+                            "Microsoft.Network/publicIPAddresses/read",
+                            "Microsoft.Network/locations/usages/read",
+                            "Microsoft.Resources/subscriptions/resourceGroups/read",
+                            "Microsoft.Resources/subscriptions/resourceGroups/write",
+                            "Microsoft.Resources/subscriptions/resourceGroups/delete",
+                            "Microsoft.Resources/subscriptions/resourcegroups/resources/read",
+                            "Microsoft.Resources/deployments/read",
+                            "Microsoft.Resources/deployments/operationstatuses/read",
+                            "Microsoft.Resources/subscriptions/resourcegroups/deployments/read",
+                            "Microsoft.Resources/subscriptions/resourcegroups/deployments/operations/read",
+                            "Microsoft.Resources/subscriptions/resourcegroups/deployments/operationstatuses/read",
+                            "Microsoft.Storage/checknameavailability/read",
+                            "Microsoft.Network/virtualNetworks/taggedTrafficConsumers/read",
+                            "Microsoft.Network/virtualNetworks/read",
+                            "Microsoft.Network/virtualNetworks/subnets/read",
+                            "Microsoft.Network/virtualNetworks/subnets/join/action",
+                            "Microsoft.Network/virtualNetworks/subnets/serviceAssociationLinks/read",
+                            "Microsoft.Network/virtualNetworks/subnets/serviceAssociationLinks/details/read",
+                            "Microsoft.Network/networkProfiles/read",
+                            "Microsoft.Network/networkSecurityGroups/read",
+                            "Microsoft.Network/routeTables/read",
+                            "Microsoft.network/virtualNetworks/join/action",
+                            "Microsoft.Network/routeTables/routes/read",
+                            "Microsoft.Synapse/workspaces/read",
+                            "Microsoft.Authorization/locks/read",
+                            "Microsoft.DataLakeAnalytics/register/action",
+                            "Microsoft.Synapse/workspaces/bigDataPools/read",
+                            "Microsoft.Batch/register/action",
+                            "Microsoft.Resources/subscriptions/read",
+                            "Microsoft.KeyVault/vaults/read",
+                            "Microsoft.MachineLearningServices/workspaces/onlineEndpoints/delete",
+                            "Microsoft.CognitiveServices/register/action",
+                            "Microsoft.CognitiveServices/checkDomainAvailability/action",
+                            "Microsoft.CognitiveServices/accounts/*/read",
+                            "Microsoft.CognitiveServices/accounts/write",
+                            "Microsoft.CognitiveServices/accounts/delete",
+                            "Microsoft.CognitiveServices/accounts/listKeys/action",
+                            "Microsoft.CognitiveServices/accounts/regenerateKey/action",
+                            "Microsoft.CognitiveServices/locations/*/read",
+                            "Microsoft.CognitiveServices/locations/checkSkuAvailability/action",
+                            "Microsoft.CognitiveServices/attestations/*/read",
+                            "Microsoft.CognitiveServices/attestations/write",
+                            "Microsoft.CognitiveServices/capacityReservations/*/read",
+                            "Microsoft.CognitiveServices/capacityReservations/write",
+                            "Microsoft.CognitiveServices/capacityReservations/delete",
+                            "Microsoft.CognitiveServices/accounts/raiBlocklists/write",
+                            "Microsoft.CognitiveServices/accounts/raiBlocklists/delete",
+                            "Microsoft.CognitiveServices/accounts/raiPolicies/write",
+                            "Microsoft.CognitiveServices/accounts/raiPolicies/delete",
+                            "Microsoft.CognitiveServices/accounts/raiBlocklists/raiBlocklistItems/write",
+                            "Microsoft.CognitiveServices/accounts/raiBlocklists/raiBlocklistItems/delete",
+                            "Microsoft.CognitiveServices/accounts/networkSecurityPerimeterAssociationProxies/write",
+                            "Microsoft.CognitiveServices/accounts/networkSecurityPerimeterAssociationProxies/delete",
+                            "Microsoft.CognitiveServices/accounts/networkSecurityPerimeterConfigurations/reconcile/action",
+                            "Microsoft.CognitiveServices/accounts/encryptionScopes/write",
+                            "Microsoft.CognitiveServices/accounts/encryptionScopes/delete",
+                            "Microsoft.CognitiveServices/accounts/deployments/write",
+                            "Microsoft.CognitiveServices/accounts/deployments/delete",
+                            "Microsoft.CognitiveServices/accounts/commitmentplans/write",
+                            "Microsoft.CognitiveServices/accounts/commitmentplans/delete",
+                            "Microsoft.CognitiveServices/accounts/privateEndpointConnections/write",
+                            "Microsoft.CognitiveServices/accounts/privateEndpointConnections/delete",
+                            "Microsoft.CognitiveServices/accounts/privateEndpointConnectionProxies/read",
+                            "Microsoft.CognitiveServices/accounts/privateEndpointConnectionProxies/write",
+                            "Microsoft.CognitiveServices/accounts/privateEndpointConnectionProxies/delete",
+                            "Microsoft.CognitiveServices/accounts/privateEndpointConnectionProxies/validate/action"
+                        ],
+                        "notActions": [],
+                        "dataActions": [],
+                        "notDataActions": []
+                    }
+                ],
+                "scopes": [
+                    "/"
+                ]
+            },
+            "managedByRoleDefinition": {
+                "idAsGuid": "91d00862-cf55-46a5-9dce-260bbd92ce25",
+                "id": "91d00862cf5546a59dce260bbd92ce25",
+                "name": "Microsoft Machine Learning Compute RP Resource Group Role",
+                "isServiceRole": true,
+                "permissions": [
+                    {
+                        "actions": [
+                            "Microsoft.Compute/availabilitySets/*",
+                            "Microsoft.Compute/locations/operations/read",
+                            "Microsoft.Compute/virtualMachines/*",
+                            "Microsoft.Compute/virtualMachines/extensions/*",
+                            "Microsoft.Compute/virtualMachineScaleSets/*",
+                            "Microsoft.Network/loadBalancers/*",
+                            "Microsoft.Network/locations/operations/read",
+                            "Microsoft.Network/networkInterfaces/*",
+                            "Microsoft.Network/networkSecurityGroups/*",
+                            "Microsoft.Network/publicIPAddresses/*",
+                            "Microsoft.Network/routeTables/*",
+                            "Microsoft.Network/virtualNetworks/*"
+                        ],
+                        "notActions": [
+                            "Microsoft.Storage/storageAccounts/blobServices/containers/blobs/*",
+                            "Microsoft.Storage/storageAccounts/queueServices/queues/messages/*"
+                        ],
+                        "dataActions": [],
+                        "notDataActions": []
+                    }
+                ],
+                "scopes": [
+                    "/"
+                ]
+            }
+        },
+        {
+            "applicationId": "44b7b882-eb46-485c-9c78-686f6b67b176",
+            "roleDefinition": {
+                "idAsGuid": "34a36fe4-521c-4206-9ba5-26ad882913a1",
+                "id": "34a36fe4521c42069ba526ad882913a1",
+                "name": "AML Registries Creator Service Role",
+                "isServiceRole": true,
+                "permissions": [
+                    {
+                        "actions": [
+                            "Microsoft.Resources/subscriptions/resourceGroups/read",
+                            "Microsoft.Resources/subscriptions/resourceGroups/write",
+                            "Microsoft.Storage/storageAccounts/read",
+                            "Microsoft.ContainerRegistry/registries/read",
+                            "Microsoft.Network/privateEndpoints/privateLinkServiceProxies/read",
+                            "Microsoft.Network/privateEndpoints/privateLinkServiceProxies/write",
+                            "Microsoft.Network/privateEndpoints/privateLinkServiceProxies/delete",
+                            "Microsoft.Network/locations/operations/read",
+                            "Microsoft.Network/locations/operationResults/read",
+                            "Microsoft.Network/privateEndpoints/read",
+                            "Microsoft.Authorization/denyAssignments/read",
+                            "Microsoft.Authorization/denyAssignments/write",
+                            "Microsoft.Authorization/denyAssignments/delete",
+                            "Microsoft.CognitiveServices/*/read"
+                        ],
+                        "notActions": [],
+                        "dataActions": [],
+                        "notDataActions": []
+                    }
+                ],
+                "scopes": [
+                    "/"
+                ]
+            },
+            "managedByRoleDefinition": {
+                "idAsGuid": "9e3af657-a8ff-583c-a75c-2fe7c4bcb635",
+                "id": "9e3af657a8ff583ca75c2fe7c4bcb635",
+                "name": "Service Owner role",
+                "isServiceRole": true,
+                "permissions": [
+                    {
+                        "actions": [
+                            "*"
+                        ],
+                        "notActions": [],
+                        "dataActions": [],
+                        "notDataActions": []
+                    }
+                ],
+                "scopes": [
+                    "/"
+                ]
+            }
+        },
+        {
+            "applicationId": "607ece82-f922-494f-88b8-30effaf12214",
+            "roleDefinition": {
+                "idAsGuid": "376aa7d7-51a9-463d-bd4d-7e1691345612",
+                "id": "376aa7d751a9463dbd4d7e1691345612",
+                "name": "Microsoft Machine Learning Compute Service Role",
+                "isServiceRole": true,
+                "permissions": [
+                    {
+                        "actions": [
+                            "Microsoft.Authorization/roleAssignments/delete",
+                            "Microsoft.Authorization/roleAssignments/write",
+                            "Microsoft.Authorization/roleAssignments/read",
+                            "Microsoft.Authorization/denyAssignments/delete",
+                            "Microsoft.Authorization/denyAssignments/read",
+                            "Microsoft.Authorization/denyAssignments/write",
+                            "Microsoft.Authorization/checkAccess/action",
+                            "Microsoft.Authorization/checkAccess/read",
+                            "Microsoft.Authorization/policyAssignments/read",
+                            "Microsoft.Authorization/policyExemptions/read",
+                            "Microsoft.Authorization/classicAdministrators/read",
+                            "Microsoft.Batch/register/action",
+                            "Microsoft.BatchAI/clusters/read",
+                            "Microsoft.ContainerInstance/register/action",
+                            "Microsoft.ContainerRegistry/checknameavailability/read",
+                            "Microsoft.ContainerRegistry/registries/listCredentials/action",
+                            "Microsoft.ContainerRegistry/registries/read",
+                            "Microsoft.ContainerRegistry/registries/write",
+                            "Microsoft.ContainerService/containerServices/read",
+                            "Microsoft.ContainerService/managedClusters/accessProfiles/read",
+                            "Microsoft.ContainerService/managedClusters/read",
+                            "Microsoft.ContainerService/register/action",
+                            "Microsoft.Compute/virtualmachines/read",
+                            "Microsoft.Databricks/workspaces/read",
+                            "Microsoft.Databricks/workspaces/write",
+                            "Microsoft.DocumentDB/register/action",
+                            "Microsoft.EventHub/namespaces/eventhubs/authorizationRules/read",
+                            "Microsoft.EventHub/namespaces/eventhubs/read",
+                            "Microsoft.EventHub/namespaces/read",
+                            "Microsoft.Insights/components/CurrentBillingFeatures/read",
+                            "Microsoft.Insights/components/read",
+                            "Microsoft.MachineLearningServices/workspaces/read",
+                            "Microsoft.MachineLearningServices/workspaces/write",
+                            "Microsoft.Resources/deployments/operations/read",
+                            "Microsoft.Search/Register/action",
+                            "Microsoft.Storage/storageAccounts/listKeys/action",
+                            "Microsoft.Storage/storageAccounts/read",
+                            "Microsoft.Network/locations/operations/read",
+                            "Microsoft.Network/locations/operationResults/read",
+                            "Microsoft.ContainerRegistry/register/action",
+                            "Microsoft.Network/privateEndpoints/read",
+                            "Microsoft.Notebooks/register/action",
+                            "Microsoft.Notebooks/NotebookProxies/write",
+                            "Microsoft.Notebooks/NotebookProxies/read",
+                            "Microsoft.Notebooks/NotebookProxies/delete",
+                            "Microsoft.Notebooks/NotebookProxies/listCredentials/action",
+                            "Microsoft.Notebooks/NotebookProxies/privateEndpointConnectionProxies/action",
+                            "Microsoft.Notebooks/NotebookProxies/removePrivateEndpointConnectionProxies/action",
+                            "Microsoft.Network/privateEndpoints/privateLinkServiceProxies/read",
+                            "Microsoft.Network/privateEndpoints/privateLinkServiceProxies/write",
+                            "Microsoft.Network/privateEndpoints/privateDnsZoneGroups/read",
+                            "Microsoft.Network/privateDnsZones/read",
+                            "Microsoft.Network/privateDnsZones/virtualNetworkLinks/read",
+                            "Microsoft.Network/privateDnsZones/A/read",
+                            "Microsoft.Network/networkInterfaces/read",
+                            "Microsoft.Network/publicIPAddresses/read",
+                            "Microsoft.Network/locations/usages/read",
+                            "Microsoft.Resources/subscriptions/resourceGroups/read",
+                            "Microsoft.Resources/subscriptions/resourceGroups/write",
+                            "Microsoft.Resources/subscriptions/resourceGroups/delete",
+                            "Microsoft.Resources/subscriptions/resourcegroups/resources/read",
+                            "Microsoft.Resources/deployments/read",
+                            "Microsoft.Resources/deployments/operationstatuses/read",
+                            "Microsoft.Resources/subscriptions/resourcegroups/deployments/read",
+                            "Microsoft.Resources/subscriptions/resourcegroups/deployments/operations/read",
+                            "Microsoft.Resources/subscriptions/resourcegroups/deployments/operationstatuses/read",
+                            "Microsoft.Storage/checknameavailability/read",
+                            "Microsoft.Network/virtualNetworks/taggedTrafficConsumers/read",
+                            "Microsoft.Network/virtualNetworks/read",
+                            "Microsoft.Network/virtualNetworks/subnets/read",
+                            "Microsoft.Network/virtualNetworks/subnets/join/action",
+                            "Microsoft.Network/virtualNetworks/subnets/serviceAssociationLinks/read",
+                            "Microsoft.Network/virtualNetworks/subnets/serviceAssociationLinks/details/read",
+                            "Microsoft.Network/networkProfiles/read",
+                            "Microsoft.Network/networkSecurityGroups/read",
+                            "Microsoft.Network/routeTables/read",
+                            "Microsoft.network/virtualNetworks/join/action",
+                            "Microsoft.Network/routeTables/routes/read",
+                            "Microsoft.Synapse/workspaces/read",
+                            "Microsoft.Authorization/locks/read",
+                            "Microsoft.DataLakeAnalytics/register/action",
+                            "Microsoft.Synapse/workspaces/bigDataPools/read",
+                            "Microsoft.Batch/register/action",
+                            "Microsoft.Resources/subscriptions/read",
+                            "Microsoft.KeyVault/vaults/read",
+                            "Microsoft.MachineLearningServices/workspaces/onlineEndpoints/delete",
+                            "Microsoft.CognitiveServices/register/action",
+                            "Microsoft.CognitiveServices/checkDomainAvailability/action",
+                            "Microsoft.CognitiveServices/accounts/*/read",
+                            "Microsoft.CognitiveServices/accounts/write",
+                            "Microsoft.CognitiveServices/accounts/delete",
+                            "Microsoft.CognitiveServices/accounts/listKeys/action",
+                            "Microsoft.CognitiveServices/accounts/regenerateKey/action",
+                            "Microsoft.CognitiveServices/locations/*/read",
+                            "Microsoft.CognitiveServices/locations/checkSkuAvailability/action",
+                            "Microsoft.CognitiveServices/attestations/*/read",
+                            "Microsoft.CognitiveServices/attestations/write",
+                            "Microsoft.CognitiveServices/capacityReservations/*/read",
+                            "Microsoft.CognitiveServices/capacityReservations/write",
+                            "Microsoft.CognitiveServices/capacityReservations/delete",
+                            "Microsoft.CognitiveServices/accounts/raiBlocklists/write",
+                            "Microsoft.CognitiveServices/accounts/raiBlocklists/delete",
+                            "Microsoft.CognitiveServices/accounts/raiPolicies/write",
+                            "Microsoft.CognitiveServices/accounts/raiPolicies/delete",
+                            "Microsoft.CognitiveServices/accounts/raiBlocklists/raiBlocklistItems/write",
+                            "Microsoft.CognitiveServices/accounts/raiBlocklists/raiBlocklistItems/delete",
+                            "Microsoft.CognitiveServices/accounts/networkSecurityPerimeterAssociationProxies/write",
+                            "Microsoft.CognitiveServices/accounts/networkSecurityPerimeterAssociationProxies/delete",
+                            "Microsoft.CognitiveServices/accounts/networkSecurityPerimeterConfigurations/reconcile/action",
+                            "Microsoft.CognitiveServices/accounts/encryptionScopes/write",
+                            "Microsoft.CognitiveServices/accounts/encryptionScopes/delete",
+                            "Microsoft.CognitiveServices/accounts/deployments/write",
+                            "Microsoft.CognitiveServices/accounts/deployments/delete",
+                            "Microsoft.CognitiveServices/accounts/commitmentplans/write",
+                            "Microsoft.CognitiveServices/accounts/commitmentplans/delete",
+                            "Microsoft.CognitiveServices/accounts/privateEndpointConnections/write",
+                            "Microsoft.CognitiveServices/accounts/privateEndpointConnections/delete",
+                            "Microsoft.CognitiveServices/accounts/privateEndpointConnectionProxies/read",
+                            "Microsoft.CognitiveServices/accounts/privateEndpointConnectionProxies/write",
+                            "Microsoft.CognitiveServices/accounts/privateEndpointConnectionProxies/delete",
+                            "Microsoft.CognitiveServices/accounts/privateEndpointConnectionProxies/validate/action"
+                        ],
+                        "notActions": [],
+                        "dataActions": [],
+                        "notDataActions": []
+                    }
+                ],
+                "scopes": [
+                    "/"
+                ]
+            },
+            "managedByRoleDefinition": {
+                "idAsGuid": "9e3af657-a8ff-583c-a75c-2fe7c4bcb635",
+                "id": "9e3af657a8ff583ca75c2fe7c4bcb635",
+                "name": "Service Owner role",
+                "isServiceRole": true,
+                "permissions": [
+                    {
+                        "actions": [
+                            "*"
+                        ],
+                        "notActions": [],
+                        "dataActions": [],
+                        "notDataActions": []
+                    }
+                ],
+                "scopes": [
+                    "/"
+                ]
+            }
+        },
+        {
+            "applicationId": "61c50b89-703d-431d-8d80-1e8618748775",
+            "roleDefinition": {
+                "idAsGuid": "d312a9a6-5102-420b-b8b3-aa6b22670aaa",
+                "id": "d312a9a65102420bb8b3aa6b22670aaa",
+                "name": "Azure Machine Learning Singularity",
+                "isServiceRole": true,
+                "permissions": [
+                    {
+                        "actions": [
+                            "Microsoft.Singularity/accounts/read",
+                            "Microsoft.Singularity/accounts/*/read"
+                        ],
+                        "notActions": [],
+                        "dataActions": [],
+                        "notDataActions": []
+                    }
+                ],
+                "scopes": [
+                    "/"
+                ]
+            },
+            "managedByRoleDefinition": {
+                "idAsGuid": "91d00862-cf55-46a5-9dce-260bbd92ce25",
+                "id": "91d00862cf5546a59dce260bbd92ce25",
+                "name": "Microsoft Machine Learning Compute RP Resource Group Role",
+                "isServiceRole": true,
+                "permissions": [
+                    {
+                        "actions": [
+                            "Microsoft.Compute/availabilitySets/*",
+                            "Microsoft.Compute/locations/operations/read",
+                            "Microsoft.Compute/virtualMachines/*",
+                            "Microsoft.Compute/virtualMachines/extensions/*",
+                            "Microsoft.Compute/virtualMachineScaleSets/*",
+                            "Microsoft.Network/loadBalancers/*",
+                            "Microsoft.Network/locations/operations/read",
+                            "Microsoft.Network/networkInterfaces/*",
+                            "Microsoft.Network/networkSecurityGroups/*",
+                            "Microsoft.Network/publicIPAddresses/*",
+                            "Microsoft.Network/routeTables/*",
+                            "Microsoft.Network/virtualNetworks/*"
+                        ],
+                        "notActions": [
+                            "Microsoft.Storage/storageAccounts/blobServices/containers/blobs/*",
+                            "Microsoft.Storage/storageAccounts/queueServices/queues/messages/*"
+                        ],
+                        "dataActions": [],
+                        "notDataActions": []
+                    }
+                ],
+                "scopes": [
+                    "/"
+                ]
+            }
+        },
+        {
+            "applicationId": "18a66f5f-dbdf-4c17-9dd7-1634712a9cbe",
+            "roleDefinition": {
+                "idAsGuid": "8b910db7-60f9-4c04-af30-71aab18eda90",
+                "id": "8b910db760f94c04af3071aab18eda90",
+                "name": "Microsoft Machine Learning Services Authorization Service Role",
+                "isServiceRole": true,
+                "permissions": [
+                    {
+                        "actions": [
+                            "Microsoft.Authorization/checkAccess/action",
+                            "Microsoft.Authorization/checkAccess/read"
+                        ],
+                        "notActions": [],
+                        "dataActions": [],
+                        "notDataActions": []
+                    }
+                ],
+                "scopes": [
+                    "/"
+                ]
+            },
+            "managedByRoleDefinition": {
+                "idAsGuid": "91d00862-cf55-46a5-9dce-260bbd92ce25",
+                "id": "91d00862cf5546a59dce260bbd92ce25",
+                "name": "Microsoft Machine Learning Compute RP Resource Group Role",
+                "isServiceRole": true,
+                "permissions": [
+                    {
+                        "actions": [
+                            "Microsoft.Compute/availabilitySets/*",
+                            "Microsoft.Compute/locations/operations/read",
+                            "Microsoft.Compute/virtualMachines/*",
+                            "Microsoft.Compute/virtualMachines/extensions/*",
+                            "Microsoft.Compute/virtualMachineScaleSets/*",
+                            "Microsoft.Network/loadBalancers/*",
+                            "Microsoft.Network/locations/operations/read",
+                            "Microsoft.Network/networkInterfaces/*",
+                            "Microsoft.Network/networkSecurityGroups/*",
+                            "Microsoft.Network/publicIPAddresses/*",
+                            "Microsoft.Network/routeTables/*",
+                            "Microsoft.Network/virtualNetworks/*"
+                        ],
+                        "notActions": [
+                            "Microsoft.Storage/storageAccounts/blobServices/containers/blobs/*",
+                            "Microsoft.Storage/storageAccounts/queueServices/queues/messages/*"
+                        ],
+                        "dataActions": [],
+                        "notDataActions": []
+                    }
+                ],
+                "scopes": [
+                    "/"
+                ]
+            }
+        },
+        {
+            "applicationId": "b8cf62f3-7cc7-4e32-ab3a-41370ef0cfcf",
+            "roleDefinition": {
+                "idAsGuid": "8b910db7-60f9-4c04-af30-71aab18eda90",
+                "id": "8b910db760f94c04af3071aab18eda90",
+                "name": "Microsoft Machine Learning Services Authorization Service Role",
+                "isServiceRole": true,
+                "permissions": [
+                    {
+                        "actions": [
+                            "Microsoft.Authorization/checkAccess/action",
+                            "Microsoft.Authorization/checkAccess/read"
+                        ],
+                        "notActions": [],
+                        "dataActions": [],
+                        "notDataActions": []
+                    }
+                ],
+                "scopes": [
+                    "/"
+                ]
+            },
+            "managedByRoleDefinition": {
+                "idAsGuid": "91d00862-cf55-46a5-9dce-260bbd92ce25",
+                "id": "91d00862cf5546a59dce260bbd92ce25",
+                "name": "Microsoft Machine Learning Compute RP Resource Group Role",
+                "isServiceRole": true,
+                "permissions": [
+                    {
+                        "actions": [
+                            "Microsoft.Compute/availabilitySets/*",
+                            "Microsoft.Compute/locations/operations/read",
+                            "Microsoft.Compute/virtualMachines/*",
+                            "Microsoft.Compute/virtualMachines/extensions/*",
+                            "Microsoft.Compute/virtualMachineScaleSets/*",
+                            "Microsoft.Network/loadBalancers/*",
+                            "Microsoft.Network/locations/operations/read",
+                            "Microsoft.Network/networkInterfaces/*",
+                            "Microsoft.Network/networkSecurityGroups/*",
+                            "Microsoft.Network/publicIPAddresses/*",
+                            "Microsoft.Network/routeTables/*",
+                            "Microsoft.Network/virtualNetworks/*"
+                        ],
+                        "notActions": [
+                            "Microsoft.Storage/storageAccounts/blobServices/containers/blobs/*",
+                            "Microsoft.Storage/storageAccounts/queueServices/queues/messages/*"
+                        ],
+                        "dataActions": [],
+                        "notDataActions": []
+                    }
+                ],
+                "scopes": [
+                    "/"
+                ]
+            }
+        },
+        {
+            "applicationId": "fb9de05a-fecc-4642-b3ca-66b9d4434d4d",
+            "roleDefinition": {
+                "idAsGuid": "8b910db7-60f9-4c04-af30-71aab18eda90",
+                "id": "8b910db760f94c04af3071aab18eda90",
+                "name": "Microsoft Machine Learning Services Authorization Service Role",
+                "isServiceRole": true,
+                "permissions": [
+                    {
+                        "actions": [
+                            "Microsoft.Authorization/checkAccess/action",
+                            "Microsoft.Authorization/checkAccess/read"
+                        ],
+                        "notActions": [],
+                        "dataActions": [],
+                        "notDataActions": []
+                    }
+                ],
+                "scopes": [
+                    "/"
+                ]
+            },
+            "managedByRoleDefinition": {
+                "idAsGuid": "91d00862-cf55-46a5-9dce-260bbd92ce25",
+                "id": "91d00862cf5546a59dce260bbd92ce25",
+                "name": "Microsoft Machine Learning Compute RP Resource Group Role",
+                "isServiceRole": true,
+                "permissions": [
+                    {
+                        "actions": [
+                            "Microsoft.Compute/availabilitySets/*",
+                            "Microsoft.Compute/locations/operations/read",
+                            "Microsoft.Compute/virtualMachines/*",
+                            "Microsoft.Compute/virtualMachines/extensions/*",
+                            "Microsoft.Compute/virtualMachineScaleSets/*",
+                            "Microsoft.Network/loadBalancers/*",
+                            "Microsoft.Network/locations/operations/read",
+                            "Microsoft.Network/networkInterfaces/*",
+                            "Microsoft.Network/networkSecurityGroups/*",
+                            "Microsoft.Network/publicIPAddresses/*",
+                            "Microsoft.Network/routeTables/*",
+                            "Microsoft.Network/virtualNetworks/*"
+                        ],
+                        "notActions": [
+                            "Microsoft.Storage/storageAccounts/blobServices/containers/blobs/*",
+                            "Microsoft.Storage/storageAccounts/queueServices/queues/messages/*"
+                        ],
+                        "dataActions": [],
+                        "notDataActions": []
+                    }
+                ],
+                "scopes": [
+                    "/"
+                ]
+            }
+        },
+        {
+            "applicationId": "bf283ae6-5efd-44a8-b56a-2a7939982d60",
+            "roleDefinition": {
+                "idAsGuid": "8b910db7-60f9-4c04-af30-71aab18eda90",
+                "id": "8b910db760f94c04af3071aab18eda90",
+                "name": "Microsoft Machine Learning Services Authorization Service Role",
+                "isServiceRole": true,
+                "permissions": [
+                    {
+                        "actions": [
+                            "Microsoft.Authorization/checkAccess/action",
+                            "Microsoft.Authorization/checkAccess/read"
+                        ],
+                        "notActions": [],
+                        "dataActions": [],
+                        "notDataActions": []
+                    }
+                ],
+                "scopes": [
+                    "/"
+                ]
+            },
+            "managedByRoleDefinition": {
+                "idAsGuid": "91d00862-cf55-46a5-9dce-260bbd92ce25",
+                "id": "91d00862cf5546a59dce260bbd92ce25",
+                "name": "Microsoft Machine Learning Compute RP Resource Group Role",
+                "isServiceRole": true,
+                "permissions": [
+                    {
+                        "actions": [
+                            "Microsoft.Compute/availabilitySets/*",
+                            "Microsoft.Compute/locations/operations/read",
+                            "Microsoft.Compute/virtualMachines/*",
+                            "Microsoft.Compute/virtualMachines/extensions/*",
+                            "Microsoft.Compute/virtualMachineScaleSets/*",
+                            "Microsoft.Network/loadBalancers/*",
+                            "Microsoft.Network/locations/operations/read",
+                            "Microsoft.Network/networkInterfaces/*",
+                            "Microsoft.Network/networkSecurityGroups/*",
+                            "Microsoft.Network/publicIPAddresses/*",
+                            "Microsoft.Network/routeTables/*",
+                            "Microsoft.Network/virtualNetworks/*"
+                        ],
+                        "notActions": [
+                            "Microsoft.Storage/storageAccounts/blobServices/containers/blobs/*",
+                            "Microsoft.Storage/storageAccounts/queueServices/queues/messages/*"
+                        ],
+                        "dataActions": [],
+                        "notDataActions": []
+                    }
+                ],
+                "scopes": [
+                    "/"
+                ]
+            }
+        },
+        {
+            "applicationId": "6608bce8-e060-4e82-bfd2-67ed4f60262f",
+            "roleDefinition": {
+                "idAsGuid": "344880d0-81ee-4377-b825-b8b79810e492",
+                "id": "344880d081ee4377b825b8b79810e492",
+                "name": "Microsoft Machine Learning Inferencing Authorization Service Role",
+                "isServiceRole": true,
+                "permissions": [
+                    {
+                        "actions": [
+                            "Microsoft.Authorization/checkAccess/action",
+                            "Microsoft.Authorization/checkAccess/read",
+                            "Microsoft.Authorization/checkAccess/action",
+                            "Microsoft.Authorization/checkAccess/read"
+                        ],
+                        "notActions": [],
+                        "dataActions": [],
+                        "notDataActions": []
+                    }
+                ],
+                "scopes": [
+                    "/"
+                ]
+            },
+            "managedByRoleDefinition": {
+                "idAsGuid": "91d00862-cf55-46a5-9dce-260bbd92ce25",
+                "id": "91d00862cf5546a59dce260bbd92ce25",
+                "name": "Microsoft Machine Learning Compute RP Resource Group Role",
+                "isServiceRole": true,
+                "permissions": [
+                    {
+                        "actions": [
+                            "Microsoft.Compute/availabilitySets/*",
+                            "Microsoft.Compute/locations/operations/read",
+                            "Microsoft.Compute/virtualMachines/*",
+                            "Microsoft.Compute/virtualMachines/extensions/*",
+                            "Microsoft.Compute/virtualMachineScaleSets/*",
+                            "Microsoft.Network/loadBalancers/*",
+                            "Microsoft.Network/locations/operations/read",
+                            "Microsoft.Network/networkInterfaces/*",
+                            "Microsoft.Network/networkSecurityGroups/*",
+                            "Microsoft.Network/publicIPAddresses/*",
+                            "Microsoft.Network/routeTables/*",
+                            "Microsoft.Network/virtualNetworks/*"
+                        ],
+                        "notActions": [
+                            "Microsoft.Storage/storageAccounts/blobServices/containers/blobs/*",
+                            "Microsoft.Storage/storageAccounts/queueServices/queues/messages/*"
+                        ],
+                        "dataActions": [],
+                        "notDataActions": []
+                    }
+                ],
+                "scopes": [
+                    "/"
+                ]
+            }
+        },
+        {
+            "applicationId": "a99783bc-5466-4cef-82eb-ebf285d77131",
+            "roleDefinition": {
+                "idAsGuid": "376aa7d7-51a9-463d-bd4d-7e1691345612",
+                "id": "376aa7d751a9463dbd4d7e1691345612",
+                "name": "Microsoft Machine Learning Compute Service Role",
+                "isServiceRole": true,
+                "permissions": [
+                    {
+                        "actions": [
+                            "Microsoft.Authorization/roleAssignments/delete",
+                            "Microsoft.Authorization/roleAssignments/write",
+                            "Microsoft.Authorization/roleAssignments/read",
+                            "Microsoft.Authorization/denyAssignments/delete",
+                            "Microsoft.Authorization/denyAssignments/read",
+                            "Microsoft.Authorization/denyAssignments/write",
+                            "Microsoft.Authorization/checkAccess/action",
+                            "Microsoft.Authorization/checkAccess/read",
+                            "Microsoft.Authorization/policyAssignments/read",
+                            "Microsoft.Authorization/policyExemptions/read",
+                            "Microsoft.Authorization/classicAdministrators/read",
+                            "Microsoft.Batch/register/action",
+                            "Microsoft.BatchAI/clusters/read",
+                            "Microsoft.ContainerInstance/register/action",
+                            "Microsoft.ContainerRegistry/checknameavailability/read",
+                            "Microsoft.ContainerRegistry/registries/listCredentials/action",
+                            "Microsoft.ContainerRegistry/registries/read",
+                            "Microsoft.ContainerRegistry/registries/write",
+                            "Microsoft.ContainerService/containerServices/read",
+                            "Microsoft.ContainerService/managedClusters/accessProfiles/read",
+                            "Microsoft.ContainerService/managedClusters/read",
+                            "Microsoft.ContainerService/register/action",
+                            "Microsoft.Compute/virtualmachines/read",
+                            "Microsoft.Databricks/workspaces/read",
+                            "Microsoft.Databricks/workspaces/write",
+                            "Microsoft.DocumentDB/register/action",
+                            "Microsoft.EventHub/namespaces/eventhubs/authorizationRules/read",
+                            "Microsoft.EventHub/namespaces/eventhubs/read",
+                            "Microsoft.EventHub/namespaces/read",
+                            "Microsoft.Insights/components/CurrentBillingFeatures/read",
+                            "Microsoft.Insights/components/read",
+                            "Microsoft.MachineLearningServices/workspaces/read",
+                            "Microsoft.MachineLearningServices/workspaces/write",
+                            "Microsoft.Resources/deployments/operations/read",
+                            "Microsoft.Search/Register/action",
+                            "Microsoft.Storage/storageAccounts/listKeys/action",
+                            "Microsoft.Storage/storageAccounts/read",
+                            "Microsoft.Network/locations/operations/read",
+                            "Microsoft.Network/locations/operationResults/read",
+                            "Microsoft.ContainerRegistry/register/action",
+                            "Microsoft.Network/privateEndpoints/read",
+                            "Microsoft.Notebooks/register/action",
+                            "Microsoft.Notebooks/NotebookProxies/write",
+                            "Microsoft.Notebooks/NotebookProxies/read",
+                            "Microsoft.Notebooks/NotebookProxies/delete",
+                            "Microsoft.Notebooks/NotebookProxies/listCredentials/action",
+                            "Microsoft.Notebooks/NotebookProxies/privateEndpointConnectionProxies/action",
+                            "Microsoft.Notebooks/NotebookProxies/removePrivateEndpointConnectionProxies/action",
+                            "Microsoft.Network/privateEndpoints/privateLinkServiceProxies/read",
+                            "Microsoft.Network/privateEndpoints/privateLinkServiceProxies/write",
+                            "Microsoft.Network/privateEndpoints/privateDnsZoneGroups/read",
+                            "Microsoft.Network/privateDnsZones/read",
+                            "Microsoft.Network/privateDnsZones/virtualNetworkLinks/read",
+                            "Microsoft.Network/privateDnsZones/A/read",
+                            "Microsoft.Network/networkInterfaces/read",
+                            "Microsoft.Network/publicIPAddresses/read",
+                            "Microsoft.Network/locations/usages/read",
+                            "Microsoft.Resources/subscriptions/resourceGroups/read",
+                            "Microsoft.Resources/subscriptions/resourceGroups/write",
+                            "Microsoft.Resources/subscriptions/resourceGroups/delete",
+                            "Microsoft.Resources/subscriptions/resourcegroups/resources/read",
+                            "Microsoft.Resources/deployments/read",
+                            "Microsoft.Resources/deployments/operationstatuses/read",
+                            "Microsoft.Resources/subscriptions/resourcegroups/deployments/read",
+                            "Microsoft.Resources/subscriptions/resourcegroups/deployments/operations/read",
+                            "Microsoft.Resources/subscriptions/resourcegroups/deployments/operationstatuses/read",
+                            "Microsoft.Storage/checknameavailability/read",
+                            "Microsoft.Network/virtualNetworks/taggedTrafficConsumers/read",
+                            "Microsoft.Network/virtualNetworks/read",
+                            "Microsoft.Network/virtualNetworks/subnets/read",
+                            "Microsoft.Network/virtualNetworks/subnets/join/action",
+                            "Microsoft.Network/virtualNetworks/subnets/serviceAssociationLinks/read",
+                            "Microsoft.Network/virtualNetworks/subnets/serviceAssociationLinks/details/read",
+                            "Microsoft.Network/networkProfiles/read",
+                            "Microsoft.Network/networkSecurityGroups/read",
+                            "Microsoft.Network/routeTables/read",
+                            "Microsoft.network/virtualNetworks/join/action",
+                            "Microsoft.Network/routeTables/routes/read",
+                            "Microsoft.Synapse/workspaces/read",
+                            "Microsoft.Authorization/locks/read",
+                            "Microsoft.DataLakeAnalytics/register/action",
+                            "Microsoft.Synapse/workspaces/bigDataPools/read",
+                            "Microsoft.Batch/register/action",
+                            "Microsoft.Resources/subscriptions/read",
+                            "Microsoft.KeyVault/vaults/read",
+                            "Microsoft.MachineLearningServices/workspaces/onlineEndpoints/delete",
+                            "Microsoft.CognitiveServices/register/action",
+                            "Microsoft.CognitiveServices/checkDomainAvailability/action",
+                            "Microsoft.CognitiveServices/accounts/*/read",
+                            "Microsoft.CognitiveServices/accounts/write",
+                            "Microsoft.CognitiveServices/accounts/delete",
+                            "Microsoft.CognitiveServices/accounts/listKeys/action",
+                            "Microsoft.CognitiveServices/accounts/regenerateKey/action",
+                            "Microsoft.CognitiveServices/locations/*/read",
+                            "Microsoft.CognitiveServices/locations/checkSkuAvailability/action",
+                            "Microsoft.CognitiveServices/attestations/*/read",
+                            "Microsoft.CognitiveServices/attestations/write",
+                            "Microsoft.CognitiveServices/capacityReservations/*/read",
+                            "Microsoft.CognitiveServices/capacityReservations/write",
+                            "Microsoft.CognitiveServices/capacityReservations/delete",
+                            "Microsoft.CognitiveServices/accounts/raiBlocklists/write",
+                            "Microsoft.CognitiveServices/accounts/raiBlocklists/delete",
+                            "Microsoft.CognitiveServices/accounts/raiPolicies/write",
+                            "Microsoft.CognitiveServices/accounts/raiPolicies/delete",
+                            "Microsoft.CognitiveServices/accounts/raiBlocklists/raiBlocklistItems/write",
+                            "Microsoft.CognitiveServices/accounts/raiBlocklists/raiBlocklistItems/delete",
+                            "Microsoft.CognitiveServices/accounts/networkSecurityPerimeterAssociationProxies/write",
+                            "Microsoft.CognitiveServices/accounts/networkSecurityPerimeterAssociationProxies/delete",
+                            "Microsoft.CognitiveServices/accounts/networkSecurityPerimeterConfigurations/reconcile/action",
+                            "Microsoft.CognitiveServices/accounts/encryptionScopes/write",
+                            "Microsoft.CognitiveServices/accounts/encryptionScopes/delete",
+                            "Microsoft.CognitiveServices/accounts/deployments/write",
+                            "Microsoft.CognitiveServices/accounts/deployments/delete",
+                            "Microsoft.CognitiveServices/accounts/commitmentplans/write",
+                            "Microsoft.CognitiveServices/accounts/commitmentplans/delete",
+                            "Microsoft.CognitiveServices/accounts/privateEndpointConnections/write",
+                            "Microsoft.CognitiveServices/accounts/privateEndpointConnections/delete",
+                            "Microsoft.CognitiveServices/accounts/privateEndpointConnectionProxies/read",
+                            "Microsoft.CognitiveServices/accounts/privateEndpointConnectionProxies/write",
+                            "Microsoft.CognitiveServices/accounts/privateEndpointConnectionProxies/delete",
+                            "Microsoft.CognitiveServices/accounts/privateEndpointConnectionProxies/validate/action"
+                        ],
+                        "notActions": [],
+                        "dataActions": [],
+                        "notDataActions": []
+                    }
+                ],
+                "scopes": [
+                    "/"
+                ]
+            },
+            "managedByRoleDefinition": {
+                "idAsGuid": "91d00862-cf55-46a5-9dce-260bbd92ce25",
+                "id": "91d00862cf5546a59dce260bbd92ce25",
+                "name": "Microsoft Machine Learning Compute RP Resource Group Role",
+                "isServiceRole": true,
+                "permissions": [
+                    {
+                        "actions": [
+                            "Microsoft.Compute/availabilitySets/*",
+                            "Microsoft.Compute/locations/operations/read",
+                            "Microsoft.Compute/virtualMachines/*",
+                            "Microsoft.Compute/virtualMachines/extensions/*",
+                            "Microsoft.Compute/virtualMachineScaleSets/*",
+                            "Microsoft.Network/loadBalancers/*",
+                            "Microsoft.Network/locations/operations/read",
+                            "Microsoft.Network/networkInterfaces/*",
+                            "Microsoft.Network/networkSecurityGroups/*",
+                            "Microsoft.Network/publicIPAddresses/*",
+                            "Microsoft.Network/routeTables/*",
+                            "Microsoft.Network/virtualNetworks/*"
+                        ],
+                        "notActions": [
+                            "Microsoft.Storage/storageAccounts/blobServices/containers/blobs/*",
+                            "Microsoft.Storage/storageAccounts/queueServices/queues/messages/*"
+                        ],
+                        "dataActions": [],
+                        "notDataActions": []
+                    }
+                ],
+                "scopes": [
+                    "/"
+                ]
+            }
+        }
+    ]
+}

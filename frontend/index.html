@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            justify-content: center;
+            align-items: center;
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            flex-direction: column;
+            height: 100%;
+            display: flex;
+            gap: 20px; /* Space between divs */
+        }
+        .search-container {
+            text-align: center;
+            padding: 100px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            max-width: 900px;
+            width: 100%;
+        }
+        #siteDescription{
+            margin: 20px 0;
+            font-size: 24px;
+            color: #333;
+        }
+        #searchBox {
+            padding: 10px;
+            font-size: 16px;
+            width: 100%;
+            margin: 20px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+
+            
+        }
+        #resultBox {
+            text-align: left;
+            padding: 100px;
+            margin-top: 10px;
+            margin-left: 100px;
+            margin-right: 100px;
+            max-width: 900px;
+            width: 100%;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        #goButton {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            transition: background-color 0.3s ease;
+        }
+        #goButton:hover {
+            background-color: #0056b3;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            padding: 8px;
+            border-bottom: 1px solid #eee;
+        }
+    </style>
+    <title>Search an Azure role having a permission</title>
+    <script>
+        function createListItems(itemsArray) {
+            const list = document.getElementById('roleList');
+            list.innerHTML = '';
+            itemsArray.forEach(item => {
+                const listItem = document.createElement('li');
+                listItem.textContent = item;
+                console.debug(item);
+                list.appendChild(listItem);
+            });
+        }
+
+        async function callAPI() {
+            let searchQuery = document.getElementById('searchBox').value;
+            try {
+                let response = await fetch(`${window.location.origin}/api/perm/search?perm=` + searchQuery, {
+                    method: 'GET',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    }
+                });
+                let data = await response.json();
+                console.debug(data);
+                createListItems(data);
+            } catch (error) {
+                console.error('Error calling the API: ', error);
+                document.getElementById('roleList').innerHTML = '<li>Error calling the API. See console for more details.</li>';
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="search-container">
+        <img src="logo.jpg" width="15%">
+        <div id="siteDescription">Search roles by Azure permission:</div>
+        <input type="text" id="searchBox" placeholder="Enter search query" value="Microsoft.MachineLearningServices/workspaces/resynckeys/action">
+        <button id="goButton" onclick="callAPI()">Search</button>
+    </div>
+    <div id="resultBox">
+        <ul id="roleList"></ul>
+    </div>
+</body>
+</html>
