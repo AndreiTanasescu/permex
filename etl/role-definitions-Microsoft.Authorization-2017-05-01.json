@@ -1,0 +1,611 @@
+{
+    "value": [
+        {
+            "name": "Microsoft.Authorization/classicAdministrators/read",
+            "display": {
+                "provider": "Microsoft Authorization",
+                "resource": "Classic subscription administrator",
+                "operation": "Get administrator",
+                "description": "Reads the administrators for the subscription."
+            }
+        },
+        {
+            "name": "Microsoft.Authorization/classicAdministrators/write",
+            "display": {
+                "provider": "Microsoft Authorization",
+                "resource": "Classic subscription administrator",
+                "operation": "Set administrator",
+                "description": "Add or modify administrator to a subscription."
+            }
+        },
+        {
+            "name": "Microsoft.Authorization/classicAdministrators/delete",
+            "display": {
+                "provider": "Microsoft Authorization",
+                "resource": "Classic subscription administrator",
+                "operation": "Delete administrator",
+                "description": "Removes the administrator from the subscription."
+            }
+        },
+        {
+            "name": "Microsoft.Authorization/classicAdministrators/operationstatuses/read",
+            "display": {
+                "provider": "Microsoft Authorization",
+                "resource": "Classic subscription administrator operation statuses",
+                "operation": "Get administrator operation statuses",
+                "description": "Gets the administrator opreation statuses of the subscription."
+            }
+        },
+        {
+            "name": "Microsoft.Authorization/roleAssignments/read",
+            "display": {
+                "provider": "Microsoft Authorization",
+                "resource": "Role assignment",
+                "operation": "Get role assignment",
+                "description": "Get information about a role assignment."
+            }
+        },
+        {
+            "name": "Microsoft.Authorization/roleAssignments/write",
+            "display": {
+                "provider": "Microsoft Authorization",
+                "resource": "Role assignment",
+                "operation": "Create role assignment",
+                "description": "Create a role assignment at the specified scope."
+            }
+        },
+        {
+            "name": "Microsoft.Authorization/roleAssignments/delete",
+            "display": {
+                "provider": "Microsoft Authorization",
+                "resource": "Role assignment",
+                "operation": "Delete role assignment",
+                "description": "Delete a role assignment at the specified scope."
+            }
+        },
+        {
+            "name": "Microsoft.Authorization/permissions/read",
+            "display": {
+                "provider": "Microsoft Authorization",
+                "resource": "Permission",
+                "operation": "List permissions",
+                "description": "Lists all the permissions the caller has at a given scope."
+            }
+        },
+        {
+            "name": "Microsoft.Authorization/locks/read",
+            "display": {
+                "provider": "Microsoft Authorization",
+                "resource": "Management lock",
+                "operation": "Get management locks",
+                "description": "Gets locks at the specified scope."
+            }
+        },
+        {
+            "name": "Microsoft.Authorization/locks/write",
+            "display": {
+                "provider": "Microsoft Authorization",
+                "resource": "Management lock",
+                "operation": "Add management locks",
+                "description": "Add locks at the specified scope."
+            }
+        },
+        {
+            "name": "Microsoft.Authorization/locks/delete",
+            "display": {
+                "provider": "Microsoft Authorization",
+                "resource": "Management lock",
+                "operation": "Delete management locks",
+                "description": "Delete locks at the specified scope."
+            }
+        },
+        {
+            "name": "Microsoft.Authorization/roleDefinitions/read",
+            "display": {
+                "provider": "Microsoft Authorization",
+                "resource": "Role definition",
+                "operation": "Get role definition",
+                "description": "Get information about a role definition."
+            }
+        },
+        {
+            "name": "Microsoft.Authorization/roleDefinitions/write",
+            "display": {
+                "provider": "Microsoft Authorization",
+                "resource": "Role definition",
+                "operation": "Create or update custom role definition",
+                "description": "Create or update a custom role definition with specified permissions and assignable scopes."
+            }
+        },
+        {
+            "name": "Microsoft.Authorization/roleDefinitions/delete",
+            "display": {
+                "provider": "Microsoft Authorization",
+                "resource": "Role definition",
+                "operation": "Delete custom role definition",
+                "description": "Delete the specified custom role definition."
+            }
+        },
+        {
+            "name": "Microsoft.Authorization/providerOperations/read",
+            "display": {
+                "provider": "Microsoft Authorization",
+                "resource": "Provider operations",
+                "operation": "Get operations for resource providers",
+                "description": "Get operations for all resource providers which can be used in role definitions."
+            }
+        },
+        {
+            "name": "Microsoft.Authorization/operations/read",
+            "display": {
+                "provider": "Microsoft Authorization",
+                "resource": "Operations",
+                "operation": "Get operations",
+                "description": "Gets the list of operations"
+            }
+        },
+        {
+            "name": "Microsoft.Authorization/policySetDefinitions/read",
+            "display": {
+                "provider": "Microsoft Authorization",
+                "resource": "Policy set definition",
+                "operation": "Get policy set definition",
+                "description": "Get information about a policy set definition."
+            }
+        },
+        {
+            "name": "Microsoft.Authorization/policySetDefinitions/write",
+            "display": {
+                "provider": "Microsoft Authorization",
+                "resource": "Policy set definition",
+                "operation": "Create policy set definition",
+                "description": "Create a custom policy set definition."
+            }
+        },
+        {
+            "name": "Microsoft.Authorization/policySetDefinitions/delete",
+            "display": {
+                "provider": "Microsoft Authorization",
+                "resource": "Policy set definition",
+                "operation": "Delete policy set definition",
+                "description": "Delete a policy set definition."
+            }
+        },
+        {
+            "name": "Microsoft.Authorization/policyDefinitions/read",
+            "display": {
+                "provider": "Microsoft Authorization",
+                "resource": "Policy definition",
+                "operation": "Get policy definition",
+                "description": "Get information about a policy definition."
+            }
+        },
+        {
+            "name": "Microsoft.Authorization/policyDefinitions/write",
+            "display": {
+                "provider": "Microsoft Authorization",
+                "resource": "Policy definition",
+                "operation": "Create policy definition",
+                "description": "Create a custom policy definition."
+            }
+        },
+        {
+            "name": "Microsoft.Authorization/policyDefinitions/delete",
+            "display": {
+                "provider": "Microsoft Authorization",
+                "resource": "Policy definition",
+                "operation": "Delete policy definition",
+                "description": "Delete a policy definition."
+            }
+        },
+        {
+            "name": "Microsoft.Authorization/policyAssignments/read",
+            "display": {
+                "provider": "Microsoft Authorization",
+                "resource": "Policy assignment",
+                "operation": "Get policy assignment",
+                "description": "Get information about a policy assignment."
+            }
+        },
+        {
+            "name": "Microsoft.Authorization/policyAssignments/write",
+            "display": {
+                "provider": "Microsoft Authorization",
+                "resource": "Policy assignment",
+                "operation": "Create policy assignment",
+                "description": "Create a policy assignment at the specified scope."
+            }
+        },
+        {
+            "name": "Microsoft.Authorization/policyAssignments/delete",
+            "display": {
+                "provider": "Microsoft Authorization",
+                "resource": "Policy assignment",
+                "operation": "Delete policy assignment",
+                "description": "Delete a policy assignment at the specified scope."
+            }
+        },
+        {
+            "name": "Microsoft.Authorization/policyAssignments/exempt/action",
+            "display": {
+                "provider": "Microsoft Authorization",
+                "resource": "Policy assignment",
+                "operation": "Exempt policy assignment",
+                "description": "Exempt a policy assignment at the specified scope."
+            }
+        },
+        {
+            "name": "Microsoft.Authorization/policyExemptions/read",
+            "display": {
+                "provider": "Microsoft Authorization",
+                "resource": "Policy exemption",
+                "operation": "Get policy exemption",
+                "description": "Get information about a policy exemption."
+            }
+        },
+        {
+            "name": "Microsoft.Authorization/policyExemptions/write",
+            "display": {
+                "provider": "Microsoft Authorization",
+                "resource": "Policy exemption",
+                "operation": "Create policy exemption",
+                "description": "Create a policy exemption at the specified scope."
+            }
+        },
+        {
+            "name": "Microsoft.Authorization/policyExemptions/delete",
+            "display": {
+                "provider": "Microsoft Authorization",
+                "resource": "Policy exemption",
+                "operation": "Delete policy exemption",
+                "description": "Delete a policy exemption at the specified scope."
+            }
+        },
+        {
+            "name": "Microsoft.Authorization/elevateAccess/action",
+            "display": {
+                "provider": "Microsoft Authorization",
+                "resource": "Microsoft Authorization",
+                "operation": "Assigns the caller to User Access Administrator role",
+                "description": "Grants the caller User Access Administrator access at the tenant scope"
+            }
+        },
+        {
+            "name": "Microsoft.Authorization/policies/audit/action",
+            "display": {
+                "provider": "Microsoft Authorization",
+                "resource": "Policy evaluation",
+                "operation": "'audit' Policy action.",
+                "description": "Action taken as a result of evaluation of Azure Policy with 'audit' effect"
+            },
+            "origin": "System"
+        },
+        {
+            "name": "Microsoft.Authorization/policies/auditIfNotExists/action",
+            "display": {
+                "provider": "Microsoft Authorization",
+                "resource": "Policy evaluation",
+                "operation": "'auditIfNotExists' Policy action.",
+                "description": "Action taken as a result of evaluation of Azure Policy with 'auditIfNotExists' effect"
+            },
+            "origin": "System"
+        },
+        {
+            "name": "Microsoft.Authorization/policies/deny/action",
+            "display": {
+                "provider": "Microsoft Authorization",
+                "resource": "Policy evaluation",
+                "operation": "'deny' Policy action.",
+                "description": "Action taken as a result of evaluation of Azure Policy with 'deny' effect"
+            },
+            "origin": "System"
+        },
+        {
+            "name": "Microsoft.Authorization/policies/deployIfNotExists/action",
+            "display": {
+                "provider": "Microsoft Authorization",
+                "resource": "Policy evaluation",
+                "operation": "'deployIfNotExists' Policy action.",
+                "description": "Action taken as a result of evaluation of Azure Policy with 'deployIfNotExists' effect"
+            },
+            "origin": "System"
+        },
+        {
+            "name": "Microsoft.Authorization/policyAssignments/resourceManagementPrivateLinks/read",
+            "display": {
+                "provider": "Microsoft Authorization",
+                "resource": "Resource Management Private Link",
+                "operation": "Get Resource Management Private Link",
+                "description": "Get information about resource management private link."
+            }
+        },
+        {
+            "name": "Microsoft.Authorization/policyAssignments/resourceManagementPrivateLinks/write",
+            "display": {
+                "provider": "Microsoft Authorization",
+                "resource": "Resource Management Private Link",
+                "operation": "Write a Resource Management Private Link",
+                "description": "Creates or updates a resource management private link."
+            }
+        },
+        {
+            "name": "Microsoft.Authorization/policyAssignments/resourceManagementPrivateLinks/delete",
+            "display": {
+                "provider": "Microsoft Authorization",
+                "resource": "Resource Management Private Link",
+                "operation": "Delete a Resource Management Private Link",
+                "description": "Deletes a resource management private link."
+            }
+        },
+        {
+            "name": "Microsoft.Authorization/policyAssignments/resourceManagementPrivateLinks/privateEndpointConnectionProxies/read",
+            "display": {
+                "provider": "Microsoft Authorization",
+                "resource": "Private Endpoint Connection Proxy",
+                "operation": "Get Private Endpoint Connection Proxy",
+                "description": "Get information about private endpoint connection proxy."
+            }
+        },
+        {
+            "name": "Microsoft.Authorization/policyAssignments/resourceManagementPrivateLinks/privateEndpointConnectionProxies/write",
+            "display": {
+                "provider": "Microsoft Authorization",
+                "resource": "Private Endpoint Connection Proxy",
+                "operation": "Write a Private Endpoint Connection Proxy",
+                "description": "Creates or updates a private endpoint connection proxy."
+            }
+        },
+        {
+            "name": "Microsoft.Authorization/policyAssignments/resourceManagementPrivateLinks/privateEndpointConnectionProxies/delete",
+            "display": {
+                "provider": "Microsoft Authorization",
+                "resource": "Private Endpoint Connection Proxy",
+                "operation": "Delete a Private Endpoint Connection Proxy",
+                "description": "Deletes a private endpoint connection proxy."
+            }
+        },
+        {
+            "name": "Microsoft.Authorization/policyAssignments/resourceManagementPrivateLinks/privateEndpointConnectionProxies/validate/action",
+            "display": {
+                "provider": "Microsoft Authorization",
+                "resource": "Private Endpoint Connection Proxy",
+                "operation": "Validate a Private Endpoint Connection Proxy",
+                "description": "Validates a private endpoint connection proxy."
+            }
+        },
+        {
+            "name": "Microsoft.Authorization/policyAssignments/resourceManagementPrivateLinks/privateEndpointConnections/read",
+            "display": {
+                "provider": "Microsoft Authorization",
+                "resource": "Private Endpoint Connection",
+                "operation": "Get Private Endpoint Connection",
+                "description": "Get information about private endpoint connection."
+            }
+        },
+        {
+            "name": "Microsoft.Authorization/policyAssignments/resourceManagementPrivateLinks/privateEndpointConnections/write",
+            "display": {
+                "provider": "Microsoft Authorization",
+                "resource": "Private Endpoint Connection",
+                "operation": "Write a Private Endpoint Connection",
+                "description": "Creates or updates a private endpoint connection."
+            }
+        },
+        {
+            "name": "Microsoft.Authorization/policyAssignments/resourceManagementPrivateLinks/privateEndpointConnections/delete",
+            "display": {
+                "provider": "Microsoft Authorization",
+                "resource": "Private Endpoint Connection",
+                "operation": "Delete a Private Endpoint Connection",
+                "description": "Deletes a private endpoint connection."
+            }
+        },
+        {
+            "name": "Microsoft.Authorization/policyAssignments/privateLinkAssociations/read",
+            "display": {
+                "provider": "Microsoft Authorization",
+                "resource": "Private Link Association",
+                "operation": "Get Private Link Association",
+                "description": "Get information about private link association."
+            }
+        },
+        {
+            "name": "Microsoft.Authorization/policyAssignments/privateLinkAssociations/write",
+            "display": {
+                "provider": "Microsoft Authorization",
+                "resource": "Private Link Association",
+                "operation": "Write a Private Link Association",
+                "description": "Creates or updates a private link association."
+            }
+        },
+        {
+            "name": "Microsoft.Authorization/policyAssignments/privateLinkAssociations/delete",
+            "display": {
+                "provider": "Microsoft Authorization",
+                "resource": "Private Link Association",
+                "operation": "Delete a Private Link Association",
+                "description": "Deletes a private link association."
+            }
+        },
+        {
+            "name": "Microsoft.Authorization/roleAssignmentScheduleRequests/read",
+            "display": {
+                "provider": "Microsoft Authorization",
+                "resource": "Role assignment schedule request",
+                "operation": "Get Role assignment schedule request",
+                "description": "Gets the role assignment schedule requests at given scope."
+            }
+        },
+        {
+            "name": "Microsoft.Authorization/roleAssignmentScheduleRequests/write",
+            "display": {
+                "provider": "Microsoft Authorization",
+                "resource": "Role assignment schedule request",
+                "operation": "Write Role assignment schedule request",
+                "description": "Creates a role assignment schedule request at given scope."
+            }
+        },
+        {
+            "name": "Microsoft.Authorization/roleAssignmentScheduleRequests/cancel/action",
+            "display": {
+                "provider": "Microsoft Authorization",
+                "resource": "Role assignment schedule request",
+                "operation": "Cancel Role assignment schedule request",
+                "description": "Cancels a pending role assignment schedule request."
+            }
+        },
+        {
+            "name": "Microsoft.Authorization/roleEligibilityScheduleRequests/read",
+            "display": {
+                "provider": "Microsoft Authorization",
+                "resource": "Role eligibility schedule request",
+                "operation": "Get Role eligibility schedule request",
+                "description": "Gets the role eligibility schedule requests at given scope."
+            }
+        },
+        {
+            "name": "Microsoft.Authorization/roleEligibilityScheduleRequests/write",
+            "display": {
+                "provider": "Microsoft Authorization",
+                "resource": "Role eligibility schedule request",
+                "operation": "Write Role eligibility schedule request",
+                "description": "Creates a role eligibility schedule request at given scope."
+            }
+        },
+        {
+            "name": "Microsoft.Authorization/roleEligibilityScheduleRequests/cancel/action",
+            "display": {
+                "provider": "Microsoft Authorization",
+                "resource": "Role eligibility schedule request",
+                "operation": "Cancel Role eligibility schedule request",
+                "description": "Cancels a pending role eligibility schedule request."
+            }
+        },
+        {
+            "name": "Microsoft.Authorization/roleAssignmentSchedules/read",
+            "display": {
+                "provider": "Microsoft Authorization",
+                "resource": "Role assignment schedule",
+                "operation": "Get Role assignment schedule",
+                "description": "Gets the role assignment schedules at given scope."
+            }
+        },
+        {
+            "name": "Microsoft.Authorization/roleEligibilitySchedules/read",
+            "display": {
+                "provider": "Microsoft Authorization",
+                "resource": "Role eligibility schedule",
+                "operation": "Get Role eligibility schedule",
+                "description": "Gets the role eligibility schedules at given scope."
+            }
+        },
+        {
+            "name": "Microsoft.Authorization/roleAssignmentScheduleInstances/read",
+            "display": {
+                "provider": "Microsoft Authorization",
+                "resource": "Role assignment schedule instance",
+                "operation": "Get Role assignment schedule instance",
+                "description": "Gets the role assignment schedule instances at given scope."
+            }
+        },
+        {
+            "name": "Microsoft.Authorization/roleEligibilityScheduleInstances/read",
+            "display": {
+                "provider": "Microsoft Authorization",
+                "resource": "Get Role eligibility schedule instance",
+                "operation": "Get Role eligibility schedule instance",
+                "description": "Gets the role eligibility schedule instances at given scope."
+            }
+        },
+        {
+            "name": "Microsoft.Authorization/roleManagementPolicies/read",
+            "display": {
+                "provider": "Microsoft Authorization",
+                "resource": "Role management policy",
+                "operation": "Get Role management policy",
+                "description": "Get Role management policies"
+            }
+        },
+        {
+            "name": "Microsoft.Authorization/roleManagementPolicies/write",
+            "display": {
+                "provider": "Microsoft Authorization",
+                "resource": "Role management policy",
+                "operation": "Write Role management policy",
+                "description": "Update a role management policy"
+            }
+        },
+        {
+            "name": "Microsoft.Authorization/roleManagementPolicyAssignments/read",
+            "display": {
+                "provider": "Microsoft Authorization",
+                "resource": "Role management policy assignment",
+                "operation": "Get Role management policy assignment",
+                "description": "Get role management policy assignments"
+            }
+        },
+        {
+            "name": "Microsoft.Authorization/diagnosticSettings/read",
+            "display": {
+                "provider": "Microsoft Authorization",
+                "resource": "Diagnostics settings",
+                "operation": "Get information about diagnostics settings",
+                "description": "Read the information about diagnostics settings"
+            }
+        },
+        {
+            "name": "Microsoft.Authorization/diagnosticSettings/write",
+            "display": {
+                "provider": "Microsoft Authorization",
+                "resource": "Diagnostics settings",
+                "operation": "Write to diagnostics settings",
+                "description": "Create or update the information of diagnostics settings"
+            }
+        },
+        {
+            "name": "Microsoft.Authorization/diagnosticSettings/delete",
+            "display": {
+                "provider": "Microsoft Authorization",
+                "resource": "Diagnostics settings",
+                "operation": "Delete a diagnostics setting",
+                "description": "Delete diagnostics settings"
+            }
+        },
+        {
+            "name": "Microsoft.Authorization/diagnosticSettingsCategories/read",
+            "display": {
+                "provider": "Microsoft Authorization",
+                "resource": "Diagnostic settings categories",
+                "operation": "Read the information about diagnostic settings categories",
+                "description": "Get the information about diagnostic settings categories"
+            }
+        },
+        {
+            "name": "Microsoft.Authorization/denyAssignments/read",
+            "display": {
+                "provider": "Microsoft Authorization",
+                "resource": "Deny assignment",
+                "operation": "Get deny assignment",
+                "description": "Get information about a deny assignment."
+            }
+        },
+        {
+            "name": "Microsoft.Authorization/denyAssignments/write",
+            "display": {
+                "provider": "Microsoft Authorization",
+                "resource": "Deny assignment",
+                "operation": "Create deny assignment",
+                "description": "Create a deny assignment at the specified scope."
+            }
+        },
+        {
+            "name": "Microsoft.Authorization/denyAssignments/delete",
+            "display": {
+                "provider": "Microsoft Authorization",
+                "resource": "Deny assignment",
+                "operation": "Delete deny assignment",
+                "description": "Delete a deny assignment at the specified scope."
+            }
+        }
+    ]
+}

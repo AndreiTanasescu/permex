@@ -1,7 +1,7 @@
 from .match_perms import filter_matching
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-from fastapi.responses import FileResponse
+from fastapi.responses import RedirectResponse
 from fastapi.staticfiles import StaticFiles
 import json
 import uvicorn
@@ -13,7 +13,7 @@ origins = [
 ]
 
 
-with open('./data/all-role-definitions.json') as f:
+with open('./data/all-role-definitions.json', mode='r', encoding='utf-8') as f:
     j = json.load(f)
     all_roles = j['value']
 
@@ -27,44 +27,42 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-#app.add_middleware(ProxiedHeadersMiddleware)
-#app.add_middleware(ProxyHeadersMiddleware)
-#app.add_middleware(HTTPSRedirectMiddleware)
 
-#app.mount("/site", StaticFiles(directory="frontend", html=True), name='frontend')
+app.mount("/site", StaticFiles(directory="frontend", html=True), name='frontend')
 
 @app.get("/")
 def serve_spa():
-    return FileResponse("./frontend/index.html")
-
-@app.get("/logo.jpg")
-def serve_spa():
-    return FileResponse("./frontend/logo.jpg")
-
-@app.get("/api/heartbeat")
-async def api_help():
-    return {"message": f"Welcome."}
+    return RedirectResponse("/site")
 
 
 @app.get('/api/perm/search')
 async def search_perm(perm: str):
+    all_matching_actions = []
 
-    all_matching_permissions = []
     for role in all_roles:
         if 'properties' not in role:
             continue
 
-        role_perms = role['properties']['permissions'][0]['actions']
+        all_actions = role['properties']['permissions'][0]['actions']
+    
+        matching_actions = filter_matching(perm, all_actions)
 
-        matching_permissions = filter_matching(perm, role_perms)
+        all_notactions = role['properties']['permissions'][0]['notActions']
 
-        if len(matching_permissions) > 0:
-            all_matching_permissions.append(f"{role['properties']['roleName']} ==> permission: {matching_permissions}")
-            
-    return all_matching_permissions
+        matching_notactions = filter_matching(perm, all_notactions)
+        if len(matching_notactions) > 0:
+            print(matching_notactions)
+
+        effective_actions = list(set(matching_actions).difference(matching_notactions))
+
+        ## remove notactions
+
+        if len(effective_actions) > 0:
+            all_matching_actions.append(
+                f"{role['properties']['roleName']} ==> permission: {effective_actions}")
+  
+    return all_matching_actions
 
 
 if __name__ == "__main__":
-    
-
     uvicorn.run(app, host="0.0.0.0", port=8000, log_level="info")

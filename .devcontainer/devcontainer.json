@@ -14,7 +14,7 @@
 		
 	}
 
-	// Features to add to the dev container. More info: https://containers.dev/features.
+	// Features to add to the dev container. More info: https://containers.dev/features.x
 	// "features": {},
 
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.

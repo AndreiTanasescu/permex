@@ -13,8 +13,5 @@ RUN pip install --trusted-host pypi.python.org -r requirements.txt
 # Make port 80 available to the world outside this container
 EXPOSE 8000
 
-# Define environment variable
-ENV NAME World
-
 # Run app.py when the container launches
-CMD ["python3", "-m", "api.match-perms"]
+CMD ["python3", "-m", "api.server"]
