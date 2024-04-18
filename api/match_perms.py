@@ -1,12 +1,10 @@
 from typing import List
 
 ##
-## Should remove not actions
 ## Should interpret data actions
-## transform to more efficient data structure
-## integrate data reload for github.
-## Doesn't remove wildcard notactions
-## return the number of data comparisons. How to reduce ?
+## return the number of data comparisons. How to reduce ? Inverted tree ?
+## [x] integrate data reload for github. (Secrets)
+## [x] Should remove not actions
 ##
 
 def filter_matching(target:str, candidates:List[str]) -> List[str]:
@@ -25,3 +23,29 @@ def filter_matching(target:str, candidates:List[str]) -> List[str]:
             matches.append(i)
       
     return matches
+
+
+def search_permission(perm: str, all_roles):
+    all_matching_actions = []
+
+    for role in all_roles:
+        if 'properties' not in role:
+            continue
+
+        permissions = role['properties']['permissions'][0]
+
+        all_actions = permissions['actions']
+      
+        matching_actions = filter_matching(perm, all_actions)
+
+        all_notactions = permissions['notActions']
+
+        matching_notactions = filter_matching(perm, all_notactions)
+        if len(matching_notactions) > 0:
+            continue # as this is a notAction.
+
+        if len(matching_actions) > 0:
+            all_matching_actions.append(
+                f"{role['properties']['roleName']} ==> permission: {matching_actions}")
+
+    return all_matching_actions

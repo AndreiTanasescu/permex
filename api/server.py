@@ -1,4 +1,4 @@
-from .match_perms import filter_matching
+from .match_perms import search_permission
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import RedirectResponse
@@ -37,27 +37,9 @@ def serve_spa():
 
 @app.get('/api/perm/search')
 async def search_perm(perm: str):
-    all_matching_actions = []
+    perms = search_permission(perm, all_roles)
 
-    for role in all_roles:
-        if 'properties' not in role:
-            continue
-
-        all_actions = role['properties']['permissions'][0]['actions']
-    
-        matching_actions = filter_matching(perm, all_actions)
-
-        all_notactions = role['properties']['permissions'][0]['notActions']
-
-        matching_notactions = filter_matching(perm, all_notactions)
-        if len(matching_notactions) > 0:
-            continue # as this is a notAction.
-
-        if len(matching_actions) > 0:
-            all_matching_actions.append(
-                f"{role['properties']['roleName']} ==> permission: {matching_actions}")
-  
-    return all_matching_actions
+    return perms
 
 
 if __name__ == "__main__":
