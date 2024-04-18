@@ -1,11 +1,55 @@
 from typing import List
+import json
 
 ##
 ## Should interpret data actions
 ## return the number of data comparisons. How to reduce ? Inverted tree ?
 ## [x] integrate data reload for github. (Secrets)
 ## [x] Should remove not actions
+## Owner, contibutor are now ... dissapeared
+## Microsoft.Resources/subscriptions/resourceGroups/read is a good test for long lists.
 ##
+
+class ProviderInvertedTree:
+    providerDict = dict()
+
+    def __init__(self, all_roles) -> None:
+        for role in all_roles:
+            role_name = role['properties']['roleName']
+            
+            if 'properties' not in role:
+                continue
+
+            permissions = role['properties']['permissions'][0]
+
+            all_actions = permissions['actions']
+
+            for action in all_actions:
+                provider = action.split('/')[0]
+
+                if not provider in self.providerDict:
+                    self.providerDict[provider] = []
+                
+                role_already_added = False
+                for existing_role in self.providerDict[provider]:
+                    if existing_role['properties']['roleName'] == role_name:
+                        role_already_added = True
+                        continue
+                
+                if not role_already_added:
+                    self.providerDict[provider].append(role)
+
+    def get_provider_roles(self, provider):
+        return self.providerDict[provider]
+
+
+with open('./data/all-role-definitions.json', mode='r', encoding='utf-8') as f:
+    j = json.load(f)
+    all_loaded_roles = j['value']
+    provider_tree = ProviderInvertedTree(all_loaded_roles)
+
+print(f'Loaded {len(all_loaded_roles)} roles')
+
 
 def filter_matching(target:str, candidates:List[str]) -> List[str]:
     """does not change the order"""
@@ -25,10 +69,10 @@ def filter_matching(target:str, candidates:List[str]) -> List[str]:
     return matches
 
 
-def search_permission(perm: str, all_roles):
+def search_permission(perm: str):
     all_matching_actions = []
 
-    for role in all_roles:
+    for role in provider_tree.get_provider_roles(perm.split('/')[0]):
         if 'properties' not in role:
             continue
 
@@ -49,3 +93,4 @@ def search_permission(perm: str, all_roles):
                 f"{role['properties']['roleName']} ==> permission: {matching_actions}")
 
     return all_matching_actions
+

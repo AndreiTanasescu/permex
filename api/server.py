@@ -13,12 +13,6 @@ origins = [
 ]
 
 
-with open('./data/all-role-definitions.json', mode='r', encoding='utf-8') as f:
-    j = json.load(f)
-    all_roles = j['value']
-
-print(f'Loaded {len(all_roles)} roles')
-
 app.add_middleware(
     CORSMiddleware,
     allow_origins=origins,
@@ -37,7 +31,7 @@ def serve_spa():
 
 @app.get('/api/perm/search')
 async def search_perm(perm: str):
-    perms = search_permission(perm, all_roles)
+    perms = search_permission(perm)
 
     return perms
 
