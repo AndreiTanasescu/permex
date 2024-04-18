@@ -51,15 +51,11 @@ async def search_perm(perm: str):
 
         matching_notactions = filter_matching(perm, all_notactions)
         if len(matching_notactions) > 0:
-            print(matching_notactions)
+            continue # as this is a notAction.
 
-        effective_actions = list(set(matching_actions).difference(matching_notactions))
-
-        ## remove notactions
-
-        if len(effective_actions) > 0:
+        if len(matching_actions) > 0:
             all_matching_actions.append(
-                f"{role['properties']['roleName']} ==> permission: {effective_actions}")
+                f"{role['properties']['roleName']} ==> permission: {matching_actions}")
   
     return all_matching_actions
 
