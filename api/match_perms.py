@@ -23,12 +23,15 @@ class ProviderInvertedTree:
             permissions = role['properties']['permissions'][0]
 
             all_actions = permissions['actions']
+            all_data_actions = permissions['dataActions']
 
-            for action in all_actions:
-                provider = action.split('/')[0]
+
+            for action in all_actions + all_data_actions:
+                provider = action.split('/')[0].strip()
 
                 if not provider in self.providerDict:
                     self.providerDict[provider] = []
+                    print(f'new provider {provider}')
                 
                 role_already_added = False
                 for existing_role in self.providerDict[provider]:
@@ -38,6 +41,10 @@ class ProviderInvertedTree:
                 
                 if not role_already_added:
                     self.providerDict[provider].append(role)
+                    
+
+    def contains_provider(self, provider):
+        return provider in self.providerDict
 
     def get_provider_roles(self, provider):
         return self.providerDict[provider]
@@ -71,18 +78,21 @@ def filter_matching(target:str, candidates:List[str]) -> List[str]:
 
 def search_permission(perm: str):
     all_matching_actions = []
+    requested_provider = perm.split('/')[0]
+    if not provider_tree.contains_provider(requested_provider):
+        return all_matching_actions
 
-    for role in provider_tree.get_provider_roles(perm.split('/')[0]):
+    for role in provider_tree.get_provider_roles(requested_provider):
         if 'properties' not in role:
             continue
 
         permissions = role['properties']['permissions'][0]
 
-        all_actions = permissions['actions']
+        all_actions = permissions['actions'] + permissions['dataActions']
       
         matching_actions = filter_matching(perm, all_actions)
 
-        all_notactions = permissions['notActions']
+        all_notactions = permissions['notActions'] + permissions['notDataActions']
 
         matching_notactions = filter_matching(perm, all_notactions)
         if len(matching_notactions) > 0:

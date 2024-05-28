@@ -3,3 +3,6 @@ docker build -t drdrei/permex:24031701 --platform linux/amd64 .
 docker push drdrei/permex:24031701
 
 docker run -p 8000:8000 -it drdrei/permex:24031701
+
+Use devcontainer
+uvicorn --reload api.server:app
