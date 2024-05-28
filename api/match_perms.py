@@ -27,7 +27,7 @@ class ProviderInvertedTree:
 
 
             for action in all_actions + all_data_actions:
-                provider = action.split('/')[0].strip()
+                provider = action.split('/')[0].strip().lower()
 
                 if not provider in self.providerDict:
                     self.providerDict[provider] = []
@@ -44,10 +44,10 @@ class ProviderInvertedTree:
                     
 
     def contains_provider(self, provider):
-        return provider in self.providerDict
+        return provider.lower() in self.providerDict
 
     def get_provider_roles(self, provider):
-        return self.providerDict[provider]
+        return self.providerDict[provider.lower()]
 
 
 with open('./data/all-role-definitions.json', mode='r', encoding='utf-8') as f:
