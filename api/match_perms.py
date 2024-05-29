@@ -2,7 +2,7 @@ from typing import List
 import json
 
 ##
-## Should interpret data actions
+## [x] Should interpret data actions
 ## return the number of data comparisons. How to reduce ? Inverted tree ?
 ## [x] integrate data reload for github. (Secrets)
 ## [x] Should remove not actions
