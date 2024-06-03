@@ -21,7 +21,7 @@
 	// "forwardPorts": [],
 
 	// Uncomment the next line to run commands after the container is created.
-	// "postCreateCommand": "cat /etc/os-release",
+	"postCreateCommand": "pip install -r dev-requirements.txt"
 
 	// Configure tool-specific properties.
 	// "customizations": {},
