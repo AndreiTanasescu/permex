@@ -4,6 +4,7 @@ import json
 ##
 ## [x] Should interpret data actions
 ## return the number of data comparisons. How to reduce ? Inverted tree ?
+## return a link to the role definition / number of permissions it gives.
 ## [x] integrate data reload for github. (Secrets)
 ## [x] Should remove not actions
 ## Owner, contibutor are now ... dissapeared
@@ -31,7 +32,7 @@ class ProviderInvertedTree:
 
                 if not provider in self.providerDict:
                     self.providerDict[provider] = []
-                    print(f'new provider {provider}')
+                    # print(f'new provider {provider}')
                 
                 role_already_added = False
                 for existing_role in self.providerDict[provider]:
@@ -50,12 +51,47 @@ class ProviderInvertedTree:
         return self.providerDict[provider.lower()]
 
 
-with open('./data/all-role-definitions.json', mode='r', encoding='utf-8') as f:
-    j = json.load(f)
-    all_loaded_roles = j['value']
-    provider_tree = ProviderInvertedTree(all_loaded_roles)
+class PermissionMatcher:
+    def __init__(self) -> None:
+        with open('./data/all-role-definitions.json', mode='r', encoding='utf-8') as f:
+            j = json.load(f)
+            all_loaded_roles = j['value']
+            self.provider_tree = ProviderInvertedTree(all_loaded_roles)
 
-print(f'Loaded {len(all_loaded_roles)} roles')
+        print(f'Loaded {len(all_loaded_roles)} roles')
+
+    def search_permission(self, perm: str):
+        all_matching_actions = []
+        requested_provider = perm.split('/')[0]
+
+        if not self.provider_tree.contains_provider(requested_provider):
+            return all_matching_actions
+
+        for role in self.provider_tree.get_provider_roles(requested_provider):
+            if 'properties' not in role:
+                continue
+
+            if 'permissions' not in role['properties']:
+                continue
+
+            permissions = role['properties']['permissions'][0]
+
+            # skip if explicit deny
+            all_notactions = permissions['notActions'] + permissions['notDataActions']
+
+            matching_notactions = filter_matching(perm, all_notactions)
+            if len(matching_notactions) > 0:
+                continue # as this is a notAction.
+
+            all_actions = permissions['actions'] + permissions['dataActions']
+        
+            matching_actions = filter_matching(perm, all_actions)
+
+            if len(matching_actions) > 0:
+                all_matching_actions.append(
+                    f"{role['properties']['roleName']} ==> permission: {matching_actions}")
+
+        return all_matching_actions
 
 
 def filter_matching(target:str, candidates:List[str]) -> List[str]:
@@ -74,33 +110,3 @@ def filter_matching(target:str, candidates:List[str]) -> List[str]:
             matches.append(i)
       
     return matches
-
-
-def search_permission(perm: str):
-    all_matching_actions = []
-    requested_provider = perm.split('/')[0]
-    if not provider_tree.contains_provider(requested_provider):
-        return all_matching_actions
-
-    for role in provider_tree.get_provider_roles(requested_provider):
-        if 'properties' not in role:
-            continue
-
-        permissions = role['properties']['permissions'][0]
-
-        all_actions = permissions['actions'] + permissions['dataActions']
-      
-        matching_actions = filter_matching(perm, all_actions)
-
-        all_notactions = permissions['notActions'] + permissions['notDataActions']
-
-        matching_notactions = filter_matching(perm, all_notactions)
-        if len(matching_notactions) > 0:
-            continue # as this is a notAction.
-
-        if len(matching_actions) > 0:
-            all_matching_actions.append(
-                f"{role['properties']['roleName']} ==> permission: {matching_actions}")
-
-    return all_matching_actions
-

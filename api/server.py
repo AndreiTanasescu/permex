@@ -1,4 +1,4 @@
-from .match_perms import search_permission
+from .match_perms import PermissionMatcher
 from fastapi import FastAPI, Query
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import RedirectResponse
@@ -25,6 +25,8 @@ app.add_middleware(
 
 app.mount("/site", StaticFiles(directory="frontend", html=True), name='frontend')
 
+permissionMatcher = PermissionMatcher()
+
 @app.get("/")
 def serve_spa():
     return RedirectResponse("/site")
@@ -32,7 +34,7 @@ def serve_spa():
 
 @app.get('/api/perm/search')
 async def search_perm(perm: Annotated[Union[str, None], Query(max_length=256)]):
-    perms = search_permission(perm)
+    perms = permissionMatcher.search_permission(perm)
 
     return perms
 
