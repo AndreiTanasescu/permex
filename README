@@ -1,3 +1,20 @@
+# Intro
+
+Sometimes, when designing access to a platform in Azure, you wonder which pre-existing roles contain a specific permission you're missing. You can use this tool to list all matching roles, and hopefully narrow down your search to the best fit.
+
+# Author
+Andrei Tanasescu
+
+# Design
+
+This is a toy example, built in a few hours, and it's entirely self-contained. There is an API powered by Flask, and the static content and data files are baked into the stateless image.
+
+# Demo
+
+Currently, the website can be used on https://permex.azurewebsites.net/site/
+
+# Build instructions
+
 docker build -t drdrei/permex:24031701 --platform linux/amd64 .
 
 docker push drdrei/permex:24031701
