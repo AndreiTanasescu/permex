@@ -1,7 +1,7 @@
 import sys
 sys.path.append('./')
 
-from api.match_perms import filter_matching
+from api.match_perms import filter_matching, PermissionMatcher
 
 def test_positive_match():
     expected = [
@@ -20,6 +20,4 @@ def test_positive_match():
     #print(actual)
     assert actual == expected
 
-
-# Microsoft.Authorization/roleAssignments/delete
 

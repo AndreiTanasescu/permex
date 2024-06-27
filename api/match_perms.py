@@ -52,8 +52,8 @@ class ProviderInvertedTree:
 
 
 class PermissionMatcher:
-    def __init__(self) -> None:
-        with open('./data/all-role-definitions.json', mode='r', encoding='utf-8') as f:
+    def __init__(self, file_location='./data/all-role-definitions.json') -> None:
+        with open(file_location, mode='r', encoding='utf-8') as f:
             j = json.load(f)
             all_loaded_roles = j['value']
             self.provider_tree = ProviderInvertedTree(all_loaded_roles)
